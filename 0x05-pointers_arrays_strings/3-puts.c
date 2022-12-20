@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 void _puts(char *str)
 {
 	int i;
@@ -10,4 +10,6 @@ void _puts(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, '\n', 1);
 }
+
